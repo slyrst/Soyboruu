@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soybooru - Home</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --accent-color: #0073ff; /* Adjust to match the specific booru color */
+            --text-main: #333;
+            --link-color: #0000ee;
+        }
+
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Top Navigation Bar */
+        nav {
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            font-size: 0.9em;
+            text-align: right;
+        }
+
+        nav a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        nav a:hover { text-decoration: underline; }
+
+        /* Main Container */
+        .home-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            margin-top: -100px; /* Pulls content up slightly for better balance */
+        }
+
+        /* The Big Logo */
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 400px; /* Adjust based on your actual logo size */
+            height: auto;
+        }
+
+        /* Search Area */
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 5px rgba(0, 115, 255, 0.2);
+        }
+
+        .search-buttons {
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 0.9em;
+            cursor: pointer;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 5px;
+        }
+
+        button:hover {
+            background: #eee;
+            border-color: #bbb;
+        }
+
+        /* Statistics Footer */
+        .stats {
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #666;
+            text-align: center;
+        }
+
+        .stats b { color: #000; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Posts</a>
+        <a href="#">Tags</a>
+        <a href="#">Wiki</a>
+        <a href="#">Account</a>
+        <a href="#">Login</a>
+    </nav>
+
+    <div class="home-container">
+        <div class="logo">
+            <img src="https://soybooru.com/themes/theme/logo.png?v5" alt="Soybooru Logo">
+        </div>
+
+        <div class="search-box">
+            <form action="/posts" method="GET">
+                <input type="text" name="tags" placeholder="Search tags (e.g. blue_sky cat_ears)" autofocus>
+                <div class="search-buttons">
+                    <button type="submit">Search</button>
+                    <button type="button">Random</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="stats">
+            Serving <b>1,240,582</b> posts and counting. <br>
+            <a href="#" style="color: #666; text-decoration: underline;">Advanced Search</a> | <a href="#" style="color: #666; text-decoration: underline;">Help</a>
+        </div>
+    </div>
+
+</body>
+</html>
