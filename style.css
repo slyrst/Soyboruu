@@ -1,0 +1,46 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+}
+
+/* Sidebar for the gallery page */
+#sidebar {
+    width: 180px;
+    float: left;
+    padding: 10px;
+    font-size: 12px;
+}
+
+/* Main area for images */
+#main {
+    margin-left: 200px;
+    padding: 10px;
+}
+
+/* Big Logo Homepage Style */
+.home-search {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.big-logo {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 400px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Thumbnail Grid */
+.thumb {
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 5px;
+    background: #f0f0f0;
+}
